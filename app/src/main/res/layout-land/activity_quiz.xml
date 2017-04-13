@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orientation="vertical"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:gravity="center"
-                  android:weightSum="1">
-
-
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:layout_width="match_parent"
+                  android:layout_height="match_parent" >
 
         <TextView
             android:id="@+id/question_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:padding="24dp" />
 
         <LinearLayout
             android:orientation="horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -34,11 +32,21 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/cheat_button"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cheat_button"/>
+            android:layout_height="200dp">
+
+            <Button
+                android:id="@+id/cheat_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/cheat_button"/>
+
+
+        </LinearLayout>
 
 
         <ImageView
@@ -46,12 +54,14 @@
             android:id="@+id/question_image_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
             android:padding="24dp" />
 
             <LinearLayout
             android:orientation="horizontal"
             android:layout_width="71dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
             android:layout_weight="0.13">
 
                 <ImageButton
@@ -72,4 +82,6 @@
             </LinearLayout>
 
 
-    </LinearLayout>
+
+
+    </FrameLayout>
